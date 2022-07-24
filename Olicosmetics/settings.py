@@ -78,7 +78,12 @@ WSGI_APPLICATION = 'Olicosmetics.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-    
+        'NAME': 'Olicosmetics',
+        'USER': 'root',
+        'PASSWORD':'',
+        'HOST': 'localhost',
+        'PORT' : '3307' 
+    }
 }
 
 
@@ -120,4 +125,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 
+MEDIA_URL = '/images/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
