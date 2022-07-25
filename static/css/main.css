@@ -1,17 +1,20 @@
 body{
-	background-color: hsl(0, 0%, 98%);
+	background-color: hsl(70, 52%, 83%);
 }
 
 h1,h2,h3,h4,h5,h6{
-	color:rgb(87, 51, 31);
+	color:rgb(247, 55, 55);
 }
 
 .box-element{
-	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
-	background-color: rgb(224, 242, 104);
+	box-shadow:hsl(313, 83%, 66%) 0 0 16px;
+	background-color: rgb(241, 238, 176);
 	border-radius: 4px;
-	padding: 10px;
+	padding: 5px;
+  width: fit-content;
 }
+
+
 
 .thumbnail{
 	width: 100%;
@@ -23,10 +26,11 @@ h1,h2,h3,h4,h5,h6{
 
 .product{
 	border-radius: 0 0 4px 4px;
+  display: contents;
 }
 
 .bg-dark{
-	background-color: #f339c4!important;
+	background-color: #557a95;
 }
 
 #cart-icon{
@@ -113,15 +117,15 @@ h1,h2,h3,h4,h5,h6{
   position: relative;
   bottom: 0;
   left: 0;
-  background-color: #d571e9;
   width: 100%;
+  padding-top: 10px;
 }
 #Footer .content{
+  background-color: #557a95;
   max-width: auto;
   margin: auto;
   padding: 0px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 Footer .content{
