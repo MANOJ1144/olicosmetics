@@ -17,7 +17,7 @@ def register(request):
         return redirect('login')
         
     else:
-        return render(request, 'blog/register.html')
+        return render(request, 'store/register.html')
 
 def login(request):
     if request.method == 'POST':
@@ -28,12 +28,12 @@ def login(request):
         )
         if user is not None:
             auth_login(request, user)
-            return redirect('home')
+            return redirect('store')
         else:
             return redirect('login')
         
     else:
-        return render(request, 'blog/login.html')
+        return render(request, 'store/login.html')
     
 
 def logout_view(request):

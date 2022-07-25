@@ -1,31 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+{% extends 'store/main.html'%}
+{% load static %}
     
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
-    {%load static%}
-    <link rel="stylesheet" href="{% static 'css/style.css'%}">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
-<body>
+{% block content%}
     
-<section class="vh-100">
     <form method='POST'action="">
     {% csrf_token%}
     <div class="container-fluid h-custom">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-md-9 col-lg-6 col-xl-5">
-                <img src="https://c4.wallpaperflare.com/wallpaper/732/260/924/anime-anime-girls-white-background-simple-background-animal-ears-hd-wallpaper-preview.jpg"
-                    class="img-fluid" alt="Sample image">
+                <img src="https://static.wixstatic.com/media/ab3aa5_04013ede16d54fadad53a44884673dde~mv2.png/v1/crop/x_35,y_0,w_5313,h_2600/fill/w_610,h_298,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Copy%20of%20Copy%20of%20Beauty%20Advisor-2%203.png"
+                     alt="Sample image">
             </div>
             <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
             
                     <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-                        <p class="lead fw-normal mb-0 me-3">Registration</p>
+                        <p class="lead fw-normal mb-0 me-3"><h1>Registration</h1></p>
                        
                     </div>
                     <form method='POST'action="">
@@ -33,30 +22,30 @@
                         <div class="form-outline mb-4">
                         <input type="text" name="firstname" id="form3Example3" class="form-control form-control-lg"
                         placeholder="Enter firstname" />
-                        <label class="form-label" for="form3Example3">Firstname</label>
+                        <label class="form-label" for="form3Example3"><b>Firstname</b></label>
                         </div><br/>
                         <div>
         
                         <input type="text" name="lastname" id="form3Example3" class="form-control form-control-lg"
                         placeholder="Enter lastname" />
-                        <label class="form-label" for="form3Example3">Lasttname</label>
+                        <label class="form-label" for="form3Example3"><b>Lasttname</b></label>
                         </div><br/>
                         <!-- Email input -->
                     <div class="form-outline mb-4">
                         <input type="text" name="email" id="form3Example3" class="form-control form-control-lg"
                             placeholder="Enter a valid email address" />
-                        <label class="form-label" for="form3Example3">Email address</label>
+                        <label class="form-label" for="form3Example3"><b>Email address</b></label>
                     </div>
                         <div>
                         <input type="text" name="username" id="form3Example3" class="form-control form-control-lg"
                         placeholder="Enter username" />
-                        <label class="form-label" for="form3Example3">Username</label>
+                        <label class="form-label" for="form3Example3"><b>Username</b></label>
                         </div><br/>
 
                         <div>
                         <input type="password" name="password" id="form3Example3" class="form-control form-control-lg"
                         placeholder="Enter password" />
-                        <label class="form-label" for="form3Example3">password</label>
+                        <label class="form-label" for="form3Example3"><b>Password</b></label>
                         </div><br/>
         
                         
@@ -64,7 +53,7 @@
                         <div class="text-center text-lg-start mt-4 pt-2">
                             <a href="{% url 'login' %}" style="padding-left: 2.5rem; padding-right: 2.5rem;" class="btn btn-denger">Back</a>
                             <button type="submit" value="register" class="btn btn-primary "
-                            style="padding-left: 2.5rem; padding-right: 2.5rem;" >Registration</button>
+                            style="padding-left: 2.5rem; padding-right: 2.5rem;" ><b>Registration</b></button>
                         </div><br/>
                     
 
@@ -73,33 +62,5 @@
         </div>
     </div>
     </form>
-    <div
-        class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
-        <!-- Copyright -->
-        <div class="text-white mb-3 mb-md-0">
-            Copyright © 2020. All rights reserved.
-        </div>
-        <!-- Copyright -->
 
-        <!-- Right -->
-        <div>
-            <a href="#!" class="text-white me-4">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="#!" class="text-white me-4">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#!" class="text-white me-4">
-                <i class="fab fa-google"></i>
-            </a>
-            <a href="#!" class="text-white">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-        </div>
-        <!-- Right -->
-    </div>
-    </form>
-</section>
-</body>
-
-</html>
+{% endblock %}
